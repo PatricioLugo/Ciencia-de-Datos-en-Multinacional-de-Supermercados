@@ -6,6 +6,8 @@ Este proyecto consiste precisamente en eso: crear un análisis completo de la fa
 
 ## Maximum Likelihood Estimation
 Cuando hablamos de Likelihood, nos referimos a la siguiente función de densidad de probabilidad conjunta de datos, donde todos los datos son independientes, están igualmente distribuidos y tienen un cierto número de parámetros:
+
 ![image](https://github.com/user-attachments/assets/f45c83e3-8028-41c2-a9c8-6a08f826e036)
+
 En ella lo que buscamos es encontrar el valor de los parámetros que maximice Ln (Likelihood). **Notemos que se usan logaritmos naturales para transformar la función en una sumatoria y que así resulte más sencilla la realización de cálculos**
 Así pues, las fórmulas que se encuentran para dichos parámetros se les denomina estimadores de maximum likelihood.
