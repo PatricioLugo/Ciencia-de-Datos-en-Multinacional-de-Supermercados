@@ -67,6 +67,44 @@ Ahora, utilizaremos el Teorema de Límite Central para encontrar en base al ingr
 
 Notemos que el porcentaje de la población que debe alcanzar el supermercado es del 25%.
 
-### Conclusiones
+### Conclusiones en relación a las ventas
 De esta manera, hemos podido calcular los gastos que implicará la creación y mantenimiento del supermercado y a su vez la cantidad de personas a las que se tiene que alcanzar para que se obtenga el ingreso deseado.
 
+### Consideraciones del Rating
+Además de las ventas, también contamos con información relevante sobre el rating que se le da al supermercado semejante.
+Primero, visualizaremos la distribución de los datos graficando con Python:
+
+![image](https://github.com/user-attachments/assets/a1ae9929-5c5e-4ced-a563-63baabc83dde)
+
+![image](https://github.com/user-attachments/assets/cff42aed-abe9-485b-8cd6-4cd1f16f3de6)
+
+Como podemos observar en el gráfico, no parece que haya una tendencia clara hacia ninguna distribución en específico, fuera de que el rating se encuentra entre el 4 y el 10. De esto podemos concluir que no hay ni una predilección especial ni lo contrario por el supermercado en cuestión.
+Ahora, para saber cuál es la probabilidad de que en la sucursal que abramos, si los datos que usamos fue en una comunidad semejante a la de Juriquilla, de que en promedio tengan un rating de 8.5 o más usaremos nuevamente el Teorema de Límite central y usaremos un proceso de cálculo de parámetros análogo al que hicimos con las ventas (es decir, que asumiremos una función de densidad beta y encontraremos la media y la varianza de acorde a eso):
+
+![image](https://github.com/user-attachments/assets/e95cc17c-41ad-40f3-b344-d9039ba7b40f)
+
+![image](https://github.com/user-attachments/assets/32307341-6f52-4a98-8d76-302258116a16)
+
+Así pues, podemos concluir que la probabilidad de que el rating sea mayor a 8.5 es aproximadamente del 49%.
+En base a este resultado le diría a los del departamento de atención a clientes que el supermercado va bien encaminado según la probabilidad obtenida, ya que es bastante significativa, sin embargo, es claro que puede mejorarse y por lo tanto habría que hacer los ajustes necesarios en el servicio al cliente para mejorar la calificación de la sucursal.
+
+## Mejora de Análisis
+A pesar de que hemos logrado hacer un análisis bastante completo, es cierto que puede ser mejorado. Hay datos que podrían ser ajustados para ser más cercanos a la realidad o parámetros que se le agreguen al cálculo de los gastos, como lo pueden ser otros servicios además de la luz o el pago de otros empleados anteriormente no considerados.
+
+### Gasto de Luz
+El primer cambio que haremos será cambiar el tiempo que se utiliza la luz a 24 horas. Para hacerlp, tan sólo cambiamos el factor de la fórmula que previamente representaba las 12 horas al día de uso de luz a 24:
+
+![image](https://github.com/user-attachments/assets/1e90f288-7729-465d-9cf3-82abc7b4c1fd)
+
+### Mantenimiento y Reparaciones
+Otro cambio que haremos, será añadir al gasto total lo que cuesta el mantenimiento y las reparaciones mensuales del supermercado. De acuerdo a Sheykin (2024), lo mínimo que se gasta mensualmente en esto son 5,000 dólares. Así pues, lo agregaremos en el código y lo convertiremos a pesos:
+
+![image](https://github.com/user-attachments/assets/db6c7e78-5364-4f75-a15f-f96abed94758)
+
+### Residuos
+Un último ajuste que haremos, será considerar el gasto que se genera para la gestión de residuos, de acuerdo a Sheykin (2024), esto es mínimamente igual a 2,000 dólares:
+
+### Cambios en los Resultados
+Así pues, estos pocos cambios que hicimos tuvieron un gran impacto en los cálculos: el aumento en gastos dada la consideración de más factores resultó en un cambio radical en la cantidad de personas que debe tener como cliente el supermercado para alcanzar el objetivo de ganancias que se busca. Ahora, más del 40% de la población objetivo debe ser alcanzada, es decir, más de 3,000 personas adicionales deben de comprar en el supermercado:
+
+![image](https://github.com/user-attachments/assets/ac749d31-f886-44c3-a4cd-833e5d90bfab)
